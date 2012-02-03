@@ -29,12 +29,14 @@ LOCAL_MODULE_CLASS := ETC
 #
 LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
 
+LOCAL_MODULE_TAGS := optional
+
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 
 # XXX the intention is that this file be copied automatically when
 # LiveWallpaperPicker is being bundled with a system.  Unfortunately
 # it isn't working correctly (it always gets copied).
-#include $(BUILD_PREBUILT)
+include $(BUILD_PREBUILT)
 
 ########################
 include $(CLEAR_VARS)
